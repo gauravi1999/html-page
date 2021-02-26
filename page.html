@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/* Style the header */
+header {
+  background-color: black;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 60%;
+  background-image: url('https://www.coreldraw.com/static/cdgs/images/pages/seo/tips/photo/basics/blur-background/blur-background-og.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  height:450px; /* only for demonstration, should be removed */
+ 
+}
+aside{
+ background-color:red;
+ padding: 20px;
+ float:right;
+ width: 40%;
+ height:450px;
+ }
+.footer {
+  height:auto;
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  color:white;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Style the footer */
+
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Home Page</h2>
+</header>
+
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+  
+  <article>
+    <h1>Content 1</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </article>
+  <aside>
+  <h1>Content 2</h1>
+ 
+<table style="width:100%">
+  <tr>
+    <th>Contact</th>
+    <th colspan="2">Phone</th>
+    
+  </tr>
+  <tr>
+    <td>Contact 1</td>
+    <td>55577854</td></tr>
+    <tr>
+    <td>Contact 2</td>
+    <td>2343453</td>
+    </tr>
+ </table>
+  </aside>
+
+
+<div class="footer">
+  <p>Footer</p>
+  <p><a href="https://www.w3schools.com/">link1</a>&nbsp<a href="https://www.facebook.com/">link2</a></p>
+  
+</div>
+</body>
+
+</html>
